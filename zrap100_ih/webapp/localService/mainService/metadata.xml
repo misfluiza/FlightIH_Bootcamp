@@ -566,11 +566,11 @@
                 <Annotation Term="SAP__capabilities.AsynchronousRequestsSupported"/>
             </Annotations>
             <Annotations Target="SAP__self.FlightIHType/Carrid">
-                <Annotation Term="SAP__common.Label" String="Carrid"/>
+                <Annotation Term="SAP__common.Label" String="Airline Id"/>
                 <Annotation Term="SAP__core.Immutable"/>
             </Annotations>
             <Annotations Target="SAP__self.FlightIHType/Carrname">
-                <Annotation Term="SAP__common.Label" String="Carrname"/>
+                <Annotation Term="SAP__common.Label" String="Airline"/>
             </Annotations>
             <Annotations Target="SAP__self.FlightIHType/Currcode">
                 <Annotation Term="SAP__common.IsCurrency"/>
@@ -588,6 +588,7 @@
             <Annotations Target="SAP__self.FlightIHType/LocalCreatedBy">
                 <Annotation Term="SAP__core.Computed"/>
                 <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__UI.Hidden"/>
                 <Annotation Term="SAP__common.Label" String="Created By"/>
                 <Annotation Term="SAP__common.QuickInfo" String="Created By User"/>
                 <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ABP_CREATION_USER"/>
@@ -608,6 +609,11 @@
                             <PropertyValue Property="Label" String="General Information"/>
                             <PropertyValue Property="ID" String="GeneralInfo"/>
                             <PropertyValue Property="Target" AnnotationPath="@SAP__UI.Identification"/>
+                        </Record>
+                        <Record Type="SAP__UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Flight Details"/>
+                            <PropertyValue Property="ID" String="F2"/>
+                            <PropertyValue Property="Target" AnnotationPath="_DetailsIH/@SAP__UI.LineItem"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -636,7 +642,7 @@
                             <PropertyValue Property="InvocationGrouping" EnumMember="SAP__UI.OperationGroupingType/Isolated"/>
                         </Record>
                         <Record Type="SAP__UI.DataField">
-                            <PropertyValue Property="Label" String="Carrname"/>
+                            <PropertyValue Property="Label" String="Airline"/>
                             <PropertyValue Property="Criticality" Path="StatusCriticality"/>
                             <PropertyValue Property="Value" Path="Carrname"/>
                         </Record>
@@ -677,7 +683,7 @@
                             <PropertyValue Property="Value" Path="Status"/>
                         </Record>
                         <Record Type="SAP__UI.DataField">
-                            <PropertyValue Property="Label" String="Carrname"/>
+                            <PropertyValue Property="Label" String="Airline"/>
                             <PropertyValue Property="Criticality" Path="StatusCriticality"/>
                             <PropertyValue Property="Value" Path="Carrname"/>
                         </Record>
@@ -711,19 +717,13 @@
                     <Collection>
                         <PropertyPath>Carrid</PropertyPath>
                         <PropertyPath>Carrname</PropertyPath>
-                        <PropertyPath>Currcode</PropertyPath>
-                        <PropertyPath>Url</PropertyPath>
-                        <PropertyPath>LocalCreatedBy</PropertyPath>
-                        <PropertyPath>LocalCreatedAt</PropertyPath>
-                        <PropertyPath>LocalLastChangedBy</PropertyPath>
-                        <PropertyPath>LocalLastChangedAt</PropertyPath>
-                        <PropertyPath>LastChangedAt</PropertyPath>
                     </Collection>
                 </Annotation>
                 <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
             </Annotations>
             <Annotations Target="SAP__self.FlightIHType/LocalCreatedAt">
                 <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.Hidden"/>
                 <Annotation Term="SAP__common.Label" String="Created On"/>
                 <Annotation Term="SAP__common.QuickInfo" String="Creation Date Time"/>
                 <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ABP_CREATION_TSTMPL"/>
@@ -731,18 +731,21 @@
             <Annotations Target="SAP__self.FlightIHType/LocalLastChangedBy">
                 <Annotation Term="SAP__core.Computed"/>
                 <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__UI.Hidden"/>
                 <Annotation Term="SAP__common.Label" String="Changed By"/>
                 <Annotation Term="SAP__common.QuickInfo" String="Local Instance Last Changed By User"/>
                 <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ABP_LOCINST_LASTCHANGE_USER"/>
             </Annotations>
             <Annotations Target="SAP__self.FlightIHType/LocalLastChangedAt">
                 <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.Hidden"/>
                 <Annotation Term="SAP__common.Label" String="Changed On"/>
                 <Annotation Term="SAP__common.QuickInfo" String="Local Instance Last Change Date Time"/>
                 <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ABP_LOCINST_LASTCHANGE_TSTMPL"/>
             </Annotations>
             <Annotations Target="SAP__self.FlightIHType/LastChangedAt">
                 <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.Hidden"/>
                 <Annotation Term="SAP__common.Label" String="Changed On"/>
                 <Annotation Term="SAP__common.QuickInfo" String="Last Change Date Time"/>
                 <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ABP_LASTCHANGE_TSTMPL"/>

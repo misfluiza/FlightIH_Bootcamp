@@ -1,31 +1,31 @@
 {
   "generationParameters": {
-    "generationDate": "Mon Oct 27 2025 16:06:32 GMT+0000 (Coordinated Universal Time)",
+    "generationDate": "Wed Dec 10 2025 18:53:56 GMT+0000 (Coordinated Universal Time)",
     "generatorPlatform": "SAP Business Application Studio",
     "serviceType": "SAP System (ABAP Cloud)",
     "metadataFilename": "",
-    "serviceUrl": "https://5bff2ab7-3ad1-48e3-8980-53a354a1b276.abap.us10.hana.ondemand.com/sap/opu/odata4/sap/zui_flight_ih_o4/srvd/sap/zui_flight_ih_o4/0001/",
-    "appName": "zrap100_ih",
-    "appTitle": "Travel App IH",
-    "appDescription": "SAP Fiori application.",
+    "serviceUrl": "https://5bff2ab7-3ad1-48e3-8980-53a354a1b276.abap.us10.hana.ondemand.com/sap/opu/odata4/sap/zui_employee_ih_o4/srvd/sap/zui_employee_ih_o4/0001/",
+    "appName": "fiori_leaveapp",
+    "appTitle": "Leave Management App",
+    "appDescription": "An SAP Fiori application.",
     "appNamespace": "",
     "ui5Theme": "sap_horizon",
-    "ui5Version": "1.136.8",
+    "ui5Version": "1.139.3",
     "enableCodeAssist": false,
     "enableEslint": false,
     "enableTypeScript": false,
     "showMockDataInfo": true,
-    "generatorVersion": "1.19.3",
+    "generatorVersion": "1.20.0",
     "template": "List Report Page V4",
     "generatorName": "SAP Fiori Application Generator",
     "entityRelatedConfig": [
       {
         "type": "Main Entity",
-        "value": "FlightIH"
+        "value": "LeaveRequest"
       },
       {
         "type": "Navigation Entity",
-        "value": "_DetailsIH"
+        "value": "_LeaveDetailsIH"
       }
     ],
     "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"

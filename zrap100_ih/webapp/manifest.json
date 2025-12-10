@@ -144,6 +144,18 @@
                     "type": "ResponsiveTable"
                   }
                 }
+              },
+              "content": {
+                "header": {
+                  "actions": {
+                    "ongotoWeb": {
+                      "press": "zrap100ih.ext.controller.GoToWebHandler.GotoWeb",
+                      "visible": true,
+                      "enabled": true,
+                      "text": "Go to Web"
+                    }
+                  }
+                }
               }
             }
           }
@@ -160,6 +172,44 @@
                 "_DetailsIH": {
                   "detail": {
                     "route": "FlightDetailsObjectPage"
+                  }
+                }
+              },
+              "content": {
+                "body": {
+                  "sections": {
+                    "GeoMap": {
+                      "template": "zrap100ih.ext.fragment.GeoMap",
+                      "position": {
+                        "placement": "After",
+                        "anchor": "GeneralInfo"
+                      },
+                      "title": "Itinerary"
+                    }
+                  }
+                },
+                "header": {
+                  "actions": {
+                    "goToWeb": {
+                      "press": "zrap100ih.ext.controller.ObjectPageExt.onButtonPress",
+                      "visible": true,
+                      "enabled": true,
+                      "text": "Go to Web",
+                      "position": {
+                        "placement": "Before",
+                        "anchor": "EditAction"
+                      }
+                    },
+                    "test": {
+                      "press": "zrap100ih.ext.controller.Ext.testpress",
+                      "visible": true,
+                      "enabled": true,
+                      "text": "test",
+                      "position": {
+                        "placement": "After",
+                        "anchor": "EditAction"
+                      }
+                    }
                   }
                 }
               }
